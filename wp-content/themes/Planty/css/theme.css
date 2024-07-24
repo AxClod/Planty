@@ -1,0 +1,71 @@
+/* Footer */
+
+header {
+    width: 1440px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo{
+    width: 201px;
+}
+
+
+/* Page d'accueil */
+
+
+.accueil-superposition {
+    position: relative;
+}
+
+.accueil-feuille-1 {
+    top: 4%;
+    left: 65%;
+    transform: translateX(-10%);
+    z-index: 2; 
+}
+
+.accueil-canette {
+    z-index: 3; 
+}
+
+.accueil-feuille-2 {
+    top: 4%;
+    right: 10%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+
+/* Nous rencontrer */
+
+.rencontrer-feuille1 {
+    bottom: 45%;
+    transform: translateX(65%);
+}
+
+.rencontrer-feuille2 {
+    bottom: 100%;
+    transform: translateX(45%);
+}
+
+.bouton {
+	width: 198px;
+    height: 55px;
+    display: flex;
+	justify-content: center;
+}
+
+.label {
+    font-family: syne;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.rencontrer-feuille3 {
+    bottom: 40%;
+    transform: translateX(-20%);
+}
