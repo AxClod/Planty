@@ -30,11 +30,7 @@ header.child ul li a  {
     color: black;
 }
 
-header.child ul li:hover  {
-    font-weight: bold;
-}
-
-.menu-item-37 {
+header.child nav :nth-child(2) {
     width:236px;
     height: 80px;
     background-color: #E0B9B4;
@@ -42,35 +38,58 @@ header.child ul li:hover  {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     border: none;
+    order: 3;
+}
+
+header.child nav :nth-child(2):hover {
+    background-color: #C02E44;
 } 
+
+
+header.child ul li :hover  {
+    font-weight: bold;
+    font-size: 18px;
+}
 
 .menu-item-37 a {
     color: white !important;
 }
 
 
-.menu-item-37:hover {
-    background-color: #C02E44;
-} 
+/* Footer */
+
+footer.child {
+    width: 1440px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+}
+
+footer.child a {
+    color: black;
+}
+
 
 /* Page d'accueil */
-
 
 .accueil-superposition {
     position: relative;
 }
 
 .accueil-feuille-1 {
-    top: 23%;
+    top: 20%;
     left: 8%;
     transform: translateX(65%);
     z-index: 1; 
 }
 
 .accueil-feuille-2 {
-    top: 23%;
+    top: 20%;
     right: 8%;
     transform: translateX(-65%);
     z-index: 2;
@@ -80,10 +99,28 @@ header.child ul li:hover  {
     z-index: 3; 
 }
 
+@media screen and (max-width: 1024px) {
+    .accueil-feuille-1 {
+        width: 90%;
+        top: 20%;
+        left: 8%;
+        transform: translateX(65%);
+        z-index: 1; 
+    }
+    
+    .accueil-feuille-2 {
+        width: 90%;
+        top: 20%;
+        right: 8%;
+        transform: translateX(-65%);
+        z-index: 2;
+    }
+}
+
 
 /* Nous rencontrer */
 
-.formulaire{
+.formulaire {
     width: 383px;
     z-index: 3;
 }
@@ -100,53 +137,103 @@ header.child ul li:hover  {
 
 /* Commander */
 
+.commander {
+    margin: 0;
+}
+
 .commander-formulaire {
     width: 860px;
 }
 
-.commander-qty{
+.commander-qty {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     gap: 175px;
+    margin-bottom: 40px;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: white;
+    padding-bottom: 40px;
 }
 
-.commander-qty1{
+input[type="number"] {
+    width: 39px;
+    height: 56px;
+    border-radius: 0px;
+}
+
+.commander-qty1 {
     width: 39px;
     height: 56px;
 }
 
-.commander-qty2{
+.commander-qty2 {
     width: 39px;
     height: 56px;
 }
 
-.commander-qty3{
+.commander-qty3 {
     width: 39px;
     height: 56px;
 }
 
-.commander-qty4{
+.commander-qty4 {
     width: 39px;
     height: 56px;
 }
 
-.commander-contact{
+.commander-contact {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: left;
     gap: 50px;
+    margin-bottom: 40px;
 }
 
-.commander-contact label{
+.commander-contact label {
     font-size: 20px;
     font-weight: 400;
     color: white;
 }
 
-.commander-bouton{
+.commander-gauche {
+    padding-right: 50px;
+    border-right: solid;
+    border-width: 1px;
+    border-color: white;
+}
+
+.commander-droite-titre {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.commander-gauche-titre {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 383px;
+}
+
+.commander-bouton {
     display: flex;
     justify-content: center;
+}
+
+input[type="submit"] {
+    width: 198px;
+    height: 55px;
+}
+
+.wpcf7-spinner {
+    display: none;
 }
