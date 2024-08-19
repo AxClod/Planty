@@ -56,34 +56,44 @@ if ( apply_filters( 'astra_header_profile_gmpg_link', true ) ) {
 	?>
 >
 
-<header>
-	<div class="header-logo">
-		<?php
-		the_custom_logo();
-		?>
-	</div>
-	<nav>
-		<?php
-		wp_nav_menu(
-			array(
-				'theme location' => 'header',
-				'container' => false,
-				'theme_location' => 'primary',
-			)
-		);
-		?>
-	</nav>
-</header>
-
+<header class="child">
+    <div class="header-logo">
+        <?php the_custom_logo(); ?>
+    </div>
+	<nav role="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+    
+    <!--
+    Some spans to act as a hamburger.
+    
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
 	<?php
-	astra_header_before();
+        wp_nav_menu(
+            array(
+                'container' => '',
+                'theme_location' => 'primary',
+            )
+        );
+        ?>
+  </div>
+</nav>
 
-	astra_header();
-
-	astra_header_after();
-
-	astra_content_before();
-	?>
+</header>
 	<div id="content" class="site-content">
 		<div class="ast-container">
 		<?php astra_content_top(); ?>
